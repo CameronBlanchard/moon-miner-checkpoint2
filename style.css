@@ -43,6 +43,10 @@
     height: 500px;
   }
 
+  img:hover{
+   cursor: url(assets/pick-1.png), auto; 
+  }
+
   .moon{
     background-image: url(assets/cheese-moon.jpg);
   }
