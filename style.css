@@ -1,4 +1,26 @@
 
+:root{
+  --light-blue: #7dbaf0;
+  --dark-blue: #33628b;
+  --cheese: #d07f31;
+  --dark-cheese: #724321;
+}
+
+.text-dark-blue{
+  color: var(--dark-blue);
+}
+
+.text-light-blue{
+  color: var(--light-blue);
+}
+
+.my-btn{
+  color: #0a0601;
+  background-color: #cc8c51;
+  border-radius: 6px;
+  text-emphasis: bold; 
+}
+
     body.debug .container,
     body.debug .container-fluid {
       outline: 2px double blue;
@@ -17,11 +39,26 @@
       background-color: #050516;
     }
   img{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
+  }
+
+  .moon{
+    background-image: url(assets/cheese-moon.jpg);
   }
 
   .bg-img{
     background-image: url(assets/dark-sky.jpg);
   }
- 
+
+ footer{
+   color: var(--text-light-blue);
+ }
+
+ .cheese-dark-text{
+   color: var(--dark-cheese);
+ }
+
+ .cheese-text{
+   color: var(--cheese);
+ }

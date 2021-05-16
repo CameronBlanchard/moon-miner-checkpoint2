@@ -12,108 +12,107 @@
 
 </head>
 
-<body class="container-fluid bg-img text-light">
+<body class="container-fluid bg-img cheese-text">
+
   <header class="text-center">
-    <h1>Welcome to Moon Miner</h1>
+    <span>
+      <h1>Welcome to Moon Miner</h1>
+    </span>
+    <span>
+      <h5 class="text-light-blue">Click on the moon to mine for cheese</h5>
+    </span>
   </header>
-  
+
   <main>
     <div class="row">
       <div class="col-lg-6 m-auto d-flex justify-content-center">
-        <img onclick="mine()"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnASzd98KkQAySPP-MIYtcPGMQ7pdc72r6pg&usqp=CAU"
-          alt="">
+        <img class="img-fluid" onclick="mine()"
+          src="assets/cheese-moon1.jpg"
+          alt="Moon">
       </div>
     </div>
+    <div id="update-block">
+
+      <div class="row text-center">
+        <div class="col-12 cheese-dark-text">
+          <h4>CHEESE: </h4>
+        </div>
+      </div>
+
       <div class="row">
-        <div class="col-lg-6 card bg-blue">
-          <span>
-            <h4 class="text-center">Resources</h4>
+        <div class="col-4">
+          <span class="text-center">
+            <h5>Resources</h5>
           </span>
-          <div id="resources">
+          <span>Pickaxes: </span>
+          <br>
+          <span>Carts: </span>
+          <br>
+          <span>Miners:</span>
+          <br>
+          <span>Rovers:</span>
+        </div>
+        <div class="col-4">
+          <span class="text-center">
+            <h5>Resource Multiplier</h5>
+          </span>
+          <span>Pickaxe: </span>
+          <br>
+          <span>Cart: </span>
+          <br>
+          <span>Miner: </span>
+          <br>
+          <span>Rover: </span>
+        </div>
+        <div class="col-4">
+          <div class="text-center">
+            <span class="text-center">
+              <h5>Moon Store</h5>
+            </span>
             <div class="row">
-              <div class="col-12">
-                <span class="">Cheese: <span id="cheese-count"></span></span>
-                <div class="row">
-                  <div class="col">
-                    <span>Pickaxes: <span id="pick-quantity"></span></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12">
-                    <span>Carts: <span id="cart-quantity"></span></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12">
-                    <span>Miners: <span id="miner-quantity"></span></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12">
-                    <span>Rovers: <span id="rover-quantity"></span></span>
-                  </div>
-                </div>
+              <div class="col-6">
+                <span class="text-left">Pickaxe Cost: </span>
+              </div>
+              <div class="col-6">
+                <button type="button"disabled = true onclick="buyPick()">Buy</button>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <span>
-            <h4 class="text-center">Moon Store</h4>
-          </span>
-          <div id="store" class="card bg-blue">
             <div class="row">
-              <div class="col-lg-6">
-                <div class="row">
-                  <div class="col-6">
-                    <span id="pick-price" class="d-flex justify-content-start m-1">Pickaxe Price:</span>
-                  </div>
-                  <div class="col-6">
-                    <span class="d-flex justify-content-end p-1"><button id="pick-btn" onclick="buyPick()"
-                        class=" btn-success m-1">BUY</button></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <span id="cart-price" class="d-flex justify-content-start m-1">Cart Price:</span>
-                  </div>
-                  <div class="col-6">
-                    <span class="d-flex justify-content-end p-1"><button id="cart-btn" onclick="buyCart()"
-                        class=" btn-success m-1">BUY</button></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <span id="miner-price" class="d-flex justify-content-start m-1">Miner Price:</span>
-                  </div>
-                  <div class="col-6">
-                    <span class="d-flex justify-content-end p-1"><button id="miner-btn" onclick="buyMiner()"
-                        class=" btn-success m-1">BUY</button></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <span id="rover-price" class="d-flex justify-content-start m-1">Rover Price:</span>
-                  </div>
-                  <div class="col-6">
-                    <span class="d-flex justify-content-end p-1"><button id="rover-btn" onclick="buyRover()"
-                        class="btn-success m-1">BUY</button></span>
-                  </div>
-                </div>
+              <div class="col-6">
+                <span>Cart Cost: </span>
+              </div>
+              <div class="col-6">
+                <button type="button" onclick="buyCart()">Buy</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span>Miner Cost: </span>
+              </div>
+              <div class="col-6">
+                <button type="button" onclick="buyMiner()">Buy</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span>Rover Cost: </span>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn" onclick="buyRover()">Buy</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
   </main>
-  <footer>
 
+  <footer class="text-center m-3 text-light-blue">
+    Brought to you by Cameron Blanchard
   </footer>
 
   <script src="app.js"></script>
 </body>
-
 
 </html>
