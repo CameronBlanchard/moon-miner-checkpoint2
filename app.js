@@ -81,7 +81,7 @@ function update() {
                 <span class="text-left">Pickaxe Cost: ${clickUpgrades.pick.price}</span>
               </div>
               <div class="col-6">
-                <button type="button" class="my-btn" onclick="buyPick()" diabled >BUY</button>
+                <button type="button" class="my-btn" onclick="buyPick()">BUY</button>
               </div>
             </div>
             <div class="row">
